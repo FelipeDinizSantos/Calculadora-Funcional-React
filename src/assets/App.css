@@ -1,0 +1,138 @@
+*
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body
+{
+    position: relative;
+    background-color: #474747;
+}
+
+div.screen
+{
+    display: flex;
+    padding: 10px 30px 30px 20px;
+    margin-bottom: 1em;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: transparent;
+    flex-direction: column;
+    width: 100%;
+    height: 60px;
+    gap: .3em;
+}
+
+div.screen span.operationScreen
+{
+    padding-left: 2px;
+    font-size: 20px;
+    color: #888686;
+    height: 20px;
+}
+
+div.screen span.resultScreen
+{
+    font-size: 50px;
+    color:#fff;
+    height: 20px;
+}
+
+button.button
+{
+    font-size: 20px;
+    outline: none;
+    border: none;
+    height: 2.6em;
+    width: 3.5em;
+    margin: 1.5px;
+    background-color: #413e3e;
+    color: #fff;
+    border-radius: 9px;
+    text-align: center;
+    transition: all ease-in-out .2s;
+}
+
+button.button:hover
+{
+    background-color: #313030;
+}
+
+button.button.equal
+{
+    font-weight: 100;
+    background-color: #76B9ED;
+    color: #000;
+}
+button.button.equal:hover
+{
+    background-color: #8ec7f3;
+}
+
+button.button.operator
+{
+    background-color: #313030;
+}
+
+button.button.operator:hover
+{
+    background-color: #413e3e;
+}
+
+.container
+{
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #202020;
+    padding: 5px;
+    height: 473px;
+    width: 295px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px #00000065;
+}
+
+.container h3
+{
+    font-family: monospace;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #413e3e;
+    color: #fff;
+    font-size: 20px;
+}
+
+.buttonsCalculator
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.copyright
+{
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+}
+
+.copyright a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.copyright a:hover
+{
+    text-decoration: underline;
+}
