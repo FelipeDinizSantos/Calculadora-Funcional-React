@@ -10,9 +10,15 @@ function App()
   const [result, setResult] = useState(0);
   const [accumulator, setAccumulator] = useState(0);
   const [operated, setOperated] = useState(false);
+  const [isPreviousAnOperator, setPreviousAsAnOperator] = useState(false);
 
   const addDigitOnScreen = (digit)=>
   {
+    if(digit === '+' || digit === '-' || digit === '*' || digit === '/' || digit === '.' ) setPreviousAsAnOperator(true);
+    else setPreviousAsAnOperator(false);
+    
+    if((digit === '+' || digit === '-' || digit === '*' || digit === '/' || digit === '.') && isPreviousAnOperator === true) return;
+    
     if((digit === '+' || digit === '-' || digit === '*' || digit === '/') && operated)
     {
       setOperated(false);
@@ -46,7 +52,7 @@ function App()
     if(operation === 'backspace')
     {
       let valueOfScreen = screenValue;
-      valueOfScreen = valueOfScreen.substring(0, (valueOfScreen.length-1))
+      valueOfScreen = valueOfScreen.substring(0, (valueOfScreen.length-1));
       setScreenValue(valueOfScreen);
       setOperated(false);
       return;
@@ -92,7 +98,7 @@ function App()
           <Button label='+' onClick={()=>addDigitOnScreen('+')} />
           <Button label='.' onClick={()=>addDigitOnScreen('.')} />
           <Button label='0' onClick={()=>addDigitOnScreen('0')} />
-          <Button label='<-'onClick={ ()=>operation('backspace')} />
+          <Button label='<-'onClick={()=>operation('backspace')} />
           <Button label='=' onClick={()=>operation('=')} />
 
         </div>
