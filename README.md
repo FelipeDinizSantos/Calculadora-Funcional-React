@@ -5,4 +5,5 @@ Este repositório contém uma aplicação simples em React desenvolvida com o ob
 2. Navegue até o diretório do projeto: `cd Calculadora-Funcional-React`
 3. Instale as dependências: `npm install`
 4. Inicie a aplicação: `npm start`
+   
 Navegue e utilize este projeto da forma que desejar!
